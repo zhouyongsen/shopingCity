@@ -16,16 +16,71 @@
 				background: url(img/regist_01.jpg);
 			}
 		</style>
+		<script>
+			window.onload =function(){
+				var text01 = document.getElementById("text01");
+				var text02 = document.getElementById("text02");
+				var text03 = document.getElementById("text03");
+				var span01 = document.getElementById("span01");
+				var span02 = document.getElementById("span02");
+				var button01 = document.getElementById("button01");
+				var form01 = document.getElementById("form01");
+				
+				var i=0;
+				var j=0;
+				//失去text03焦点
+				text03.onblur = function(){
+					mima()					
+				}
+				//获得text03焦点
+				text03.onfocus =function(){
+					span01.style.display = "none";
+				}
+				//失去text01焦点
+				text01.onblur =function(){
+					phone();
+				}
+				//获得text01焦点
+				text01.onfocus =function(){					
+					span02.style.display = "none";
+				}
+				button01.onclick =function(){
+					phone();
+					mima();
+					if(i==1||j==1){
+						form01.action="new_file.html";
+					}
+					
+				}
+				function mima(){
+					if(text02.value != text03.value){
+						span01.style.display = "block";
+					}else {
+						i=1;
+					}
+				}
+				
+				function phone(){
+					if(text01.value==""){						
+						span02.style.display = "block";
+					}else {
+						j=1;
+					}
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div class="main">
-			<p id="">注册账号</p>
+			<p id="">注册月芽账号</p>
 			<div class="main_regist">
-				<form>
-					<input type="text" name="" id="" value="" placeholder="手机号" /><br />
-					<input type="text" name="" id="" value="" placeholder="密码"/><br />
-					<input type="text" name="" id="" value="" placeholder="确认密码" /><br />
-					<input class="regist" type="button" name="" id="" value="立即注册" />
+				<form id="form01" action ="" method="post">			
+					<span id="span02">手机号不能为空</span>
+					<input type="text" name="" id="text01" value="" placeholder="手机号" /><br />
+					<input type="text" name="" id="text02" value="" placeholder="密码"/><br />
+					<input type="text" name="" id="text03" value="" placeholder="确认密码" /><br />
+					<span id="span01">两次输入的密码不一样，请重新输入！</span>
+					<input class="regist" type="submit" name="" id="button01" value="立即注册" />
 					<a href="#"> 已有账号</a>
 				</form>
 			</div>

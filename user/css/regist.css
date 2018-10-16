@@ -9,6 +9,7 @@
 }
 
 .main_regist {
+	position: relative;
 	margin: 0 auto;
 	margin-top: 30px;
 	width: 300px;
@@ -41,5 +42,22 @@ a {
 
 p {
 	font-size: 20px;
-	margin-left: 40%;
+	margin-left: 36%;
+}
+#span01{
+	position: absolute;
+	display: block;
+	font-size: 12px;
+	color: red;
+	top: 205px;
+	left: 50px;
+	display: none;
+}
+#span02{
+	position: absolute;
+	font-size: 12px;
+	color: red;
+	top: 39px;
+	left: 150px;
+	display: none;
 }
