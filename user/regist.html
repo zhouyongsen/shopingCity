@@ -23,6 +23,8 @@
 				var text03 = document.getElementById("text03");
 				var span01 = document.getElementById("span01");
 				var span02 = document.getElementById("span02");
+				var span03 = document.getElementById("span03");
+				var span04 = document.getElementById("span04");
 				var button01 = document.getElementById("button01");
 				var form01 = document.getElementById("form01");
 				
@@ -30,10 +32,14 @@
 				var j=0;
 				//失去text03焦点
 				text03.onblur = function(){
+					if(text03.value ==""){
+						span04.style.display = "block";
+					}
 					mima()					
 				}
 				//获得text03焦点
 				text03.onfocus =function(){
+					span04.style.display = "none";
 					span01.style.display = "none";
 				}
 				//失去text01焦点
@@ -44,6 +50,21 @@
 				text01.onfocus =function(){					
 					span02.style.display = "none";
 				}
+				//失去text02焦点
+				text02.onblur =function(){
+					if(text02.value ==""){
+						span03.style.display = "block";
+					}
+					
+				}
+				//获得text02焦点
+				text02.onfocus =function(){
+					if(text02.value ==""){
+						span03.style.display = "none";
+					}
+					
+				}
+
 				button01.onclick =function(){
 					phone();
 					mima();
@@ -55,13 +76,14 @@
 				function mima(){
 					if(text02.value != text03.value){
 						span01.style.display = "block";
-					}else {
+					}else if(text02.value == text03.value){
 						i=1;
 					}
 				}
 				
 				function phone(){
-					if(text01.value==""){						
+					
+					if(/^1\d{10}$/.test(text01.value)==false){						
 						span02.style.display = "block";
 					}else {
 						j=1;
@@ -75,12 +97,14 @@
 			<p id="">注册月芽账号</p>
 			<div class="main_regist">
 				<form id="form01" action ="" method="post">			
-					<span id="span02">手机号不能为空</span>
+					<span id="span02">请输入正确的手机号</span>
 					<input type="text" name="" id="text01" value="" placeholder="手机号" /><br />
 					<input type="text" name="" id="text02" value="" placeholder="密码"/><br />
+					<span id="span03">密码不能为空</span>
 					<input type="text" name="" id="text03" value="" placeholder="确认密码" /><br />
+					<span id="span04">确认密码不能为空</span>
 					<span id="span01">两次输入的密码不一样，请重新输入！</span>
-					<input class="regist" type="submit" name="" id="button01" value="立即注册" />
+					<input class="regist" type="button" name="" id="button01" value="立即注册" />
 					<a href="#"> 已有账号</a>
 				</form>
 			</div>

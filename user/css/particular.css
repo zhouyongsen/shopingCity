@@ -1,0 +1,364 @@
+. {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-width: 1226px;
+	height: 100%;
+}
+/*头部第一个菜单栏*/
+.topbar01 {
+	height: 40px;
+	background: black;
+	
+}
+
+/*设置通用样式*/
+*{
+	margin: 0;
+	padding:0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*顶部导航栏*/
+.header{
+	height: 40px;
+	width: 1226px;
+	margin: 0 auto;
+	line-height: 40px;
+	font-size: 14px;
+	background: rgb(51,51,51);
+	color: rgb(161,161,161);
+}
+.header_left{
+	float: left;
+}
+.header_left li{
+	float: left;
+	padding: 0px 12px;
+}
+.header_left li:hover{
+	color: white;
+	cursor: pointer;
+}
+.header_right{
+	float:right ;
+}
+.header_right li{
+	float: left;
+	padding: 0px 12px;
+}
+.header_right li:hover{
+	color: white;
+	cursor: pointer;
+}
+.header_right li a{
+	font-size: 14px;
+	color: rgb(161,161,161);
+	padding-left: 40px;
+	background: url(../img/gouwuche1.png) no-repeat;
+	background-size: 23px;
+	background-position-x: 14px;
+}
+
+.header_right li:nth-child(4):hover{
+	background: white;
+}
+.header_right li a:hover{
+	color: orange;
+	background: url(../img/gouwuche2.png) no-repeat;
+	background-size: 23px;
+	background-position-x: 14px;
+}
+
+/*头部第二个菜单栏*/
+
+.topbar02_nei {
+	width: 1226px;
+	height: 68px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 20;
+}
+
+.topbar02 {
+	width: 100%;
+	height: 68px;
+	border-bottom: solid 1px #e0e0e0;
+	background: white;
+	z-index: 20;
+}
+
+.topbar02_01 {
+	float: left;
+}
+
+.topbar02_01 h2 {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 60px;
+	color: #212121;
+}
+
+.topbar02_02 {
+	float: right;
+	margin: 17px;
+}
+
+.topbar02_02 a {
+	text-decoration: none;
+	color: #616161;
+}
+
+.topbar02_02 a:hover {
+	cursor: pointer;
+	color: #F37119;
+}
+
+.topbar02_02 span {
+	color: #e0e0e0;
+	margin: 0 .25em;
+}
+/*为方便您购买，请提前登录 立即登录*/
+/*品详情信息*/
+
+.topbar04 {
+	width: 1226px;
+	height: 1226px;
+	margin: 0 auto;
+	position: relative;
+	/*background: wheat;*/
+}
+/*左侧轮播图*/
+
+.topbar04_left {
+	position: relative;
+	width: 560px;
+	height: 560px;
+	background: red;
+}
+
+.topbar04_left img {
+	position: absolute;
+	display: block;
+}
+
+.topbar04_left img:hover {
+	cursor: pointer;
+}
+
+.topbar04_left_div {
+	float: left;
+	width: 50px;
+	height: 16px;
+	left: 182px;
+	top: 510px;
+	margin-left: 10px;
+	position: relative;
+}
+
+.topbar04_left_a {
+	background: #ccc;
+	position: absolute;
+	display: block;
+	float: left;
+	width: 50px;
+	height: 5px;
+	margin-top: 10px;
+}
+
+#btn1,
+#btn2 {
+	position: absolute;
+	width: 30px;
+	height: 40px;
+	font-size: 20px;
+	top: 263px;
+	left: 0;
+	opacity: 0.7;
+}
+
+#btn2 {
+	left: 520px;
+}
+
+#btn1:hover,
+#btn2:hover {
+	cursor: pointer;
+}
+/*商品详情右边*/
+
+.topbar04_right {
+	float: right;
+	position: absolute;
+	width: 606px;
+	height: 560px;
+	top: 0;
+	right: 12px;
+}
+
+.topbar04_right_01 {
+	border-bottom: solid 1px #CCCCCC;
+}
+
+.topbar04_right_01_name h2 {
+	font-size: 24px;
+	color: #212121;
+}
+
+.topbar04_right_01_sp02 {
+	height: 40px;
+	margin-top: 20px;
+	color: red;
+	font-size: 18px;
+}
+
+.topbar04_right_01_sp01 {
+	font-size: 13px;
+	opacity: 0.8;
+	text-indent: 20px;
+}
+/*选择版本*/
+/*选择颜色*/
+
+.versions_sp {
+	display: block;
+	width: 200px;
+	font-size: 18px;
+	margin-top: 10px;
+	opacity: 0.8;
+}
+
+.versions_choose {
+	margin-top: 20px;
+	height: 46px;
+}
+
+.versions_choose >div {
+	float: left;
+	margin-left: 3px;
+	width: 298px;
+	height: 44px;
+	border: solid 1px #CCCCCC;
+	overflow: hidden;
+}
+
+.versions_choose >div:hover {
+	cursor: pointer;
+}
+
+.versions_choose span {
+	display: block;
+	float: left;
+	text-align: 16px;
+	margin-top: 11px;
+	margin-left: 20px;
+}
+
+#versions03 {
+	margin-left: 45%;
+}
+
+#versions04 {
+	margin-left: 45%;
+}
+
+.price {
+	float: right;
+	margin-right: px;
+}
+/*选择数量*/
+
+.versions_number {
+	width: 200px;
+	height: 60px;
+	font-size: 30px;
+	margin-top: 10px;
+	border: solid 1px #CCCCCC;
+}
+
+.versions_number >div {
+	float: left;
+	width: 50px;
+	height: 60px;
+	background: white;
+	line-height: 60px;
+	text-align: center;
+}
+
+.versions_number >div:hover {
+	cursor: pointer;
+	background: #CCCCCC;
+}
+#versions_num_input{
+	
+	width: 100px;
+	height: 60px;
+	border: none;
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+}
+.versions_number >span {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+/*加入购物车*/
+
+.addCar {
+	width: 400px;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.addCar input {
+	width: 400px;
+	height: 50px;
+	background: #ff6700;
+	color: white;
+	font-size: 16px;
+	border: none;
+}
+
+.addCar input:hover {
+	cursor: pointer;
+	background: #FF6757;
+}
+/*底部维修，7天包退*/
+
+.bottom01 {
+	width: 1226px;
+	height: 100px;
+	background: white;
+	margin-top: 20px;
+	border-bottom: solid 1px #CCCCCC;
+}
+
+.bottom01 a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	color: black;
+	opacity: 0.8;
+	width: 200px;
+	height: 20px;
+	margin-top: 35px;
+	text-align: center;
+	line-height: 20px;
+	margin-left: 30px;
+	border-right: solid 1px #CCCCCC;
+}
+
+.bottom01 .bottom01_a5 {
+	border: none;
+}

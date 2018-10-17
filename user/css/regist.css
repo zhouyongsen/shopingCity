@@ -44,20 +44,31 @@ p {
 	font-size: 20px;
 	margin-left: 36%;
 }
-#span01{
-	position: absolute;
-	display: block;
+span{
+	position: absolute;	
 	font-size: 12px;
 	color: red;
+}
+#span01{		
 	top: 205px;
 	left: 50px;
 	display: none;
 }
 #span02{
-	position: absolute;
-	font-size: 12px;
-	color: red;
+	
 	top: 39px;
-	left: 150px;
+	left: 142px;
+	display: none;
+}
+#span03{
+	
+	top: 105px;
+	left: 170px;
+	display: none;
+}
+#span04{
+	
+	top: 172px;
+	left: 146px;
 	display: none;
 }
