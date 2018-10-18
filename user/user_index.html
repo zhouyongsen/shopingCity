@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>商城&nbsp;&nbsp;首页</title>
+		<link type="text/css" rel="stylesheet" href="css/user_index.css" />
+		<link type="text/css" href="font_6htrfkud4f/iconfont.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+		<script type="text/javascript" src="js/user_index.js"></script>
+	</head>
+
+	<body>
+		<!--顶部导航栏-->
+		<header class="header" id="header">
+			<ul class="header_left">
+				<li>月芽商城</li>
+				<li>手机</li>
+				<li>显示器</li>
+				<li>电脑</li>
+			</ul>
+			<ul class="header_right">
+				<li>登陆</li>
+				<li>注册</li>
+				<li>消息通知</li>
+				<li>
+					<a href="#">购物车(<span id="gouwuche_shuliang">0</span>)</a>
+				</li>
+			</ul>
+		</header>
+		<article class="body">
+			<!--logo及搜索框-->
+			<section class="search">
+				<ul class="search_left">
+					<li></li>
+					<li>手机</li>
+					<li>笔记本</li>
+					<li>充电宝</li>
+				</ul>
+				<form class="search_box" action="https://www.hao123.com/" method="get" onsubmit="return check();">
+					<input id="input1" type="text" />
+					<input id="input2" type="submit" value=" " />
+					<i class="icon iconfont icon-sousuo"></i>
+				</form>
+			</section>
+			<!--产品分类及展示-->
+			<div class="zhanshi">
+				<div class="zhanshi_left">
+					<span id="zhanshi_left_shouji">手机</span>
+					<span id="zhanshi_left_xianshiqi">显示器</span>
+					<span id="zhanshi_diannao">电脑</span>
+				</div>
+				<div class="zhanshi_right">
+					<a href="#">
+						<img src="img/xmad_eQTJk.jpg" />
+					</a>
+					<a href="#">
+						<img src="img/xmad_JIicR.jpg" />
+					</a>
+					<a href="#">
+						<img src="img/xmad_LtKUd.jpg" />
+					</a>
+					<a href="#">
+						<img src="img/xmad_MsJlx.jpg" />
+					</a>
+					<a href="#">
+						<img src="img/xmad_lnrbU.jpg" />
+					</a>
+					<span id="zhanshi_right_span1"></span>
+					<span id="zhanshi_right_span2"></span>
+					<div id="yuandian1"></div>
+					<div id="yuandian2"></div>
+					<div id="yuandian3"></div>
+					<div id="yuandian4"></div>
+					<div id="yuandian5"></div>
+				</div>
+			</div>
+
+			<!--手机展示-->
+			<div class="shoujizhanshi" id="shoujizhanshi">
+				<div class="shoujzhanshi_header">
+					<span>手机</span>
+					<a href="#">查看全部</a>
+				</div>
+				<div class="shoujizhanshi_content">
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/shoujizhanshi_item1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米8 青春版 4GB+64GB</a>
+						</h3>
+						<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+						<p class="price"><span>1399</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/shoujizhanshi_item2.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米8 屏幕指纹版 8GB+128GB</a>
+						</h3>
+						<p class="desc">全球首款压感屏幕指纹，双频GPS超精准定位</p>
+						<p class="price"><span>3599</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/shoujizhanshi_item3.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米8 SE 4GB+64GB</a>
+						</h3>
+						<p class="desc">AI 超感光双摄，三星 AMOLED 屏幕</p>
+						<p class="price"><span>1699</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/shoujizhanshi_item3.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米8 青春版 4GB+64GB</a>
+						</h3>
+						<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+						<p class="price"><span>1399</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/shoujizhanshi_item3.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米8 青春版 4GB+64GB</a>
+						</h3>
+						<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+						<p class="price"><span>1399</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/shoujizhanshi_item3.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米8 青春版 4GB+64GB</a>
+						</h3>
+						<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+						<p class="price"><span>1399</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/shoujizhanshi_item3.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米8 青春版 4GB+64GB</a>
+						</h3>
+						<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+						<p class="price"><span>1399</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/shoujizhanshi_item3.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米8 青春版 4GB+64GB</a>
+						</h3>
+						<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+						<p class="price"><span>1399</span>元</p>
+					</div>
+				</div>
+				<div class="shoujizhanshi_fanye">
+					<a class="shangyiye" href="#">上一页</a>
+					<a class="yema" href="#">1</a>
+					<a class="yema" href="#">2</a>
+					<a class="yema" href="#">3</a>
+					<a class="xiayiye" href="#">下一页</a>
+				</div>
+			</div>
+			
+			<!--显示器-->
+			<div class="shoujizhanshi" id="xianshiqi">
+				<div class="shoujzhanshi_header">
+					<span>显示器</span>
+					<a href="#">查看全部</a>
+				</div>
+				<div class="shoujizhanshi_content">
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/xianshiqi_1.png" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米电视4A 55英寸</a>
+						</h3>
+						<p class="desc">4K高清HDR / 真四核64位高性能处理器</p>
+						<p class="price"><span>2299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/xianshiqi_1.png" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米电视4A 55英寸</a>
+						</h3>
+						<p class="desc">4K高清HDR / 真四核64位高性能处理器</p>
+						<p class="price"><span>2299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/xianshiqi_1.png" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米电视4A 55英寸</a>
+						</h3>
+						<p class="desc">4K高清HDR / 真四核64位高性能处理器</p>
+						<p class="price"><span>2299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/xianshiqi_1.png" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米电视4A 55英寸</a>
+						</h3>
+						<p class="desc">4K高清HDR / 真四核64位高性能处理器</p>
+						<p class="price"><span>2299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/xianshiqi_1.png" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米电视4A 55英寸</a>
+						</h3>
+						<p class="desc">4K高清HDR / 真四核64位高性能处理器</p>
+						<p class="price"><span>2299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/xianshiqi_1.png" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米电视4A 55英寸</a>
+						</h3>
+						<p class="desc">4K高清HDR / 真四核64位高性能处理器</p>
+						<p class="price"><span>2299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/xianshiqi_1.png" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米电视4A 55英寸</a>
+						</h3>
+						<p class="desc">4K高清HDR / 真四核64位高性能处理器</p>
+						<p class="price"><span>2299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/xianshiqi_1.png" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">小米电视4A 55英寸</a>
+						</h3>
+						<p class="desc">4K高清HDR / 真四核64位高性能处理器</p>
+						<p class="price"><span>2299</span>元</p>
+					</div>
+				</div>
+				<div class="shoujizhanshi_fanye">
+					<a class="shangyiye" href="#">上一页</a>
+					<a class="yema" href="#">1</a>
+					<a class="yema" href="#">2</a>
+					<a class="yema" href="#">3</a>
+					<a class="xiayiye" href="#">下一页</a>
+				</div>
+			</div>
+			<!--电脑展示-->
+			<div class="shoujizhanshi" id="diannao">
+				<div class="shoujzhanshi_header">
+					<span>电脑</span>
+					<a href="#">查看全部</a>
+				</div>
+				<div class="shoujizhanshi_content">
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/diannao1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">15.6 Pro i5 8G 1050MAX-Q 256G</a>
+						</h3>
+						<p class="desc"></p>
+						<p class="price"><span>6299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/diannao1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">15.6 Pro i5 8G 1050MAX-Q 256G</a>
+						</h3>
+						<p class="desc"></p>
+						<p class="price"><span>6299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/diannao1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">15.6 Pro i5 8G 1050MAX-Q 256G</a>
+						</h3>
+						<p class="desc"></p>
+						<p class="price"><span>6299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/diannao1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">15.6 Pro i5 8G 1050MAX-Q 256G</a>
+						</h3>
+						<p class="desc"></p>
+						<p class="price"><span>6299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/diannao1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">15.6 Pro i5 8G 1050MAX-Q 256G</a>
+						</h3>
+						<p class="desc"></p>
+						<p class="price"><span>6299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/diannao1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">15.6 Pro i5 8G 1050MAX-Q 256G</a>
+						</h3>
+						<p class="desc"></p>
+						<p class="price"><span>6299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/diannao1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">15.6 Pro i5 8G 1050MAX-Q 256G</a>
+						</h3>
+						<p class="desc"></p>
+						<p class="price"><span>6299</span>元</p>
+					</div>
+					<div class="shoujizhanshi_content_item">
+						<span class="xinpin">新品</span>
+						<a class="content_item_img" href="#">
+							<img src="img/diannao1.jpg" />
+						</a>
+						<h3>
+							<a class="content_item_text" href="#">15.6 Pro i5 8G 1050MAX-Q 256G</a>
+						</h3>
+						<p class="desc"></p>
+						<p class="price"><span>6299</span>元</p>
+					</div>
+				</div>
+				<div class="shoujizhanshi_fanye">
+					<a class="shangyiye" href="#">上一页</a>
+					<a class="yema" href="#">1</a>
+					<a class="yema" href="#">2</a>
+					<a class="yema" href="#">3</a>
+					<a class="xiayiye" href="#">下一页</a>
+				</div>
+			</div>
+		</article>
+		<!--侧边栏-->
+		<div class="cebianlan">
+			<a id="cebianlan_gwc" href="#"></a>
+			<a href="#shoujizhanshi">手机</a>
+			<a href="#xianshiqi">显示器</a>
+			<a href="#diannao">电脑</a>
+			<a href="#header">回到顶部</a>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var input1 = document.getElementById("input1");
+
+		function check() {
+			if (input1.value.length <= 0) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+	</script>
+
+</html>

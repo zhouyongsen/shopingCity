@@ -88,7 +88,7 @@
 			</a>			
 		</div>
 		<div id="box">
-			<form action="index.html" method="post" id="login">
+			<form action="index.html" method="post" id="login" onsubmit="return check();">
 				<h1 style="color:rgb(239,91,0);margin-top:-10px ;">用户登陆 </h1>				
 				<input id="input_zhanghao" type="text" placeholder="请输入账号！" />
 				<p id="p1" >请输入正确的手机号！</p>
@@ -127,6 +127,13 @@
 	input_mima.onkeyup = function(){
 		if(/^[a-zA-Z0-9]{4,10}$/.test(input_mima.value)==true){
 			p2.style.display = "none";
+		}
+	}
+	function check(){
+		if(/^1\d{10}$/.test(input_zhanghao.value)==true&&/^[a-zA-Z0-9]{4,10}$/.test(input_mima.value)==true){
+			return true;
+		}else{
+			return false;
 		}
 	}
 </script>
