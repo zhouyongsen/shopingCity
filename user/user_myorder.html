@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>我的订单</title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			body {
+				background: rgb(245, 245, 245);
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			a {
+				display: inline-block;
+				text-decoration: none;
+			}
+			
+			.myorder {
+				width: 886px;
+				margin: 40px auto;
+				background: white;
+				padding: 0px 48px 30px 48px;
+				margin-bottom: 30px;
+			}
+			
+			.myorder>p {
+				font-size: 30px;
+				height: 68px;
+				font-weight: 400;
+				line-height: 68px;
+				color: #757575;
+			}
+			
+			.myorder_header {
+				height: 56px;
+			}
+			
+			.myorder_header ul {
+				padding: 18px 0px;
+				float: left;
+				color: #757575;
+			}
+			
+			.myorder_header ul >li {
+				float: left;
+				line-height: 20px;
+				padding: 0px 20px;
+				border-left: 1px solid #e0e0e0;
+			}
+			
+			.myorder_header ul >li:hover {
+				color: #463f3f4a;
+			}
+			
+			.myorder_header ul >li:nth-child(1) {
+				padding-left: 0px;
+				color: #ff6700;
+				border: none;
+			}
+			
+			.myorder_header_searchbox {
+				float: right;
+			}
+			
+			.myorder_header_searchbox {
+				width: 269px;
+				height: 40px;
+				margin-top: 8px;
+			}
+			
+			.myorder_header_searchbox >input {
+				width: 189px;
+				height: 40px;
+				padding: 0px 15px;
+				font-size: 12px;
+				line-height: 40px;
+			}
+			
+			.myorder_header_searchbox span {
+				border: 1px solid #b9a1a1;
+				border-left: none;
+				display: inline-block;
+				margin-left: -5px;
+				height: 43px;
+				width: 40px;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.myorder_header_searchbox span:hover {
+				color: white;
+				background: #ff6700;
+			}
+			
+			.myorder_item_box {
+				width: 880px;
+				height: 225px;
+				border: 1px solid orangered;
+				margin-top: 15px;
+			}
+			
+			.myorder_item_box_header {
+				height: 55px;
+				border: 1px solid goldenrod;
+				background: #fffaf7;
+				padding: 30px 30px 0px 30px;
+			}
+			
+			.myorder_item_box_header .myorder_status {
+				font-size: 18px;
+				color: #ff6700;
+				margin-top: -10px;
+				margin-bottom: 8px;
+			}
+			
+			.myorder_item_box_header ul {
+				float: left;
+				font-size: 14px;
+				color: #757575;
+			}
+			
+			.myorder_item_box_header ul li {
+				padding: 0 3px;
+			}
+			
+			.myorder_item_box_header ul a {
+				font-size: 14px;
+				color: #757575;
+				display: inline-block;
+			}
+			
+			.sep {
+				margin: 0 0.25em;
+				font-family: sans-serif;
+				margin-left: 8px;
+			}
+			
+			.myorder_item_box_header >span {
+				float: right;
+				font-size: 14px;
+				color: #757575;
+				margin-top: -10px;
+			}
+			
+			.myorder_item_box_header ul li {
+				float: left;
+			}
+			
+			.jiage {
+				margin-right: 5px;
+				font-size: 28px;
+				color: #333;
+				height: 18px;
+				line-height: 1;
+				font-weight: 200px;
+			}
+			
+			.myorder_item_box_content a{
+				display: inline-block;
+			}
+			.myorder_item_box_content>div{
+				display: inline-block;
+			}
+			.ligoumai{
+				float: right;
+				position: relative;
+				top: 25px;
+				left: -65px;
+			}
+			.ligoumai a{
+				margin-top: 10px;
+				padding: 4px 17px;
+			}
+			.ligoumai .a1{
+				background: #ff6700;
+				color: white;
+			}
+			.ligoumai .a1:hover{
+				background: orangered;
+			}
+			.ligoumai .a2:hover{
+				border: 1px solid #757575;
+				background: #696969;
+				color: white;
+			}
+			.ligoumai .a2{
+				border: 1px solid #757575;
+				color: #333333;
+			}
+			.myorder_item_box_content{
+				position: relative;
+			}
+			.myorder_item_box_content_desc{
+				position: relative;
+				top:-10px;
+				left: 45px;
+				font-size: 14px;
+				line-height: 22px;
+			}
+			.myorder_item_box_content_desc a{
+				color: #333333;
+			}
+			.myorder_item_box_content>a{
+				position: relative;
+				top:15px;
+				left: 35px;
+			}
+			.myorder_fanye{
+				margin-top:30px;
+				height: 30px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.myorder_shangyiye ,.myorder_xiayiye{
+				display: inline-block;
+				font-size: 24px;
+				line-height: 24px;
+				padding: 2px 6px;
+				margin-right: 30px;
+			}
+			.myorder_xiayiye{
+				margin-right: 0px;
+				margin-left: 30px;
+			}
+			.sp1{
+				height: 24px;
+				line-height: 24px;
+				font-size: 18px;
+				padding:4px 20px;
+				background: #696969;
+				margin:0px 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="myorder">
+			<p>我的订单</p>
+			<div class="myorder_header">
+				<ul>
+					<li>全部有效订单</li>
+					<li>待支付</li>
+					<li>待收货</li>
+					<li>已关闭</li>
+				</ul>
+				<div class="myorder_header_searchbox">
+					<input type="text" placeholder="输入商品名称、商品编号、订单号" />
+					<span>搜索</span>
+				</div>
+			</div>
+			<!--全部订单-->
+			<div class="myorder_item_box">
+				<div class="myorder_item_box_header">
+					<p class="myorder_status">等待支付</p>
+					<ul>
+						<li>2018年10月15日 15:35<span class="sep">|</span></li>
+						<li>用户名<span class="sep">|</span></li>
+						<li>
+							<a href="#">20198474892374</a>
+							<span class="sep">|</span>
+						</li>
+						<li>在线支付</li>
+					</ul>
+					<span>
+						订单金额：
+						<span class="jiage">3434.00</span>元
+					</span>
+				</div>
+				<div class="myorder_item_box_content">
+					<a href="#">
+						<img src="img/shoujizhanshi_item1.jpg" width="80" height="86"/>
+					</a>
+					<div class="myorder_item_box_content_desc">
+						<p><a href="#">小米8 屏幕指纹版 8GB内存 透明 128GB</a></p>
+						<p class="price">  3599元  × 1  </p>
+					</div>
+					<div class="ligoumai">
+						<p><a  class="a1" href="#">立即购买</a></p>
+						<p><a class="a2" href="#">订单详情</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="myorder_fanye">
+				<span class="myorder_shangyiye"><</span>
+				<span class="sp1">1</span>
+				<span class="myorder_xiayiye">></span>
+			</div>
+		</div>
+		
+	</body>
+
+</html>
