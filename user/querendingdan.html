@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>填写订单信息</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background: rgba(245, 245, 245, 0.9);
+				width: 1366px;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			.header {
+				height: 105px;
+				background: white;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				border-bottom: 3px solid orange;
+			}
+			
+			.header .logo {
+				display: inline-block;
+				width: 80px;
+				height: 40px;
+				background: url(img/yueliang_logo.jpg) no-repeat;
+				background-size: 80px;
+				margin-left: 60px;
+			}
+			
+			.header >span {
+				display: inline-block;
+				width: 112px;
+				height: 48px;
+				font-size: 28px;
+				line-height: 48px;
+				margin-left: 45px;
+				font-weight: 400;
+				opacity: 0.9;
+			}
+			
+			.header .user_name {
+				display: inline-block;
+				color: #757575;
+				font-size: 12px;
+				position: relative;
+				left: 850px;
+			}
+			
+			.header .user_order {
+				display: inline-block;
+				color: #757575;
+				font-size: 12px;
+				position: relative;
+				left: 860px;
+			}
+			
+			.header .user_name span {
+				font-size: 16px;
+				display: inline-block;
+			}
+			
+			.header .user_name:hover {
+				color: orange;
+			}
+			
+			.user_name_list {
+				font-size: 12px;
+				width: 100px;
+				background: #FFFFFF;
+				line-height: 30px;
+				padding: 7px 0;
+				position: absolute;
+				top: 64px;
+				left: 1128px;
+				text-align: center;
+				display: none;
+			}
+			
+			.user_name_list li a {
+				display: block;
+				width: 100px;
+				color: #757575;
+			}
+			
+			.user_name_list li a:hover {
+				color: orange;
+				background: #CCCCCC;
+			}
+			
+			.content_box {
+				width: 1226px;
+				height: 950px;
+				background: white;
+				margin: 40px auto;
+				padding: 0px 40px;
+				overflow: hidden;
+			}
+			
+			.address_box {
+				height: 230px;
+				margin-top: 45px;
+				position: relative;
+			}
+			
+			.address_box >p {
+				font-size: 18px;
+			}
+			
+			.address_box_item {
+				width: 230px;
+				height: 140px;
+				margin-top: 20px;
+				margin-right: 20px;
+				padding: 30px 20px 10px 20px;
+				position: relative;
+				border: 1px solid #CCCCCC;
+				display: inline-block;
+			}
+			
+			.address_box_item:hover {
+				border: 1px solid #808080;
+			}
+			
+			.address_box_item_update {
+				position: absolute;
+				right: 32px;
+				bottom: 16px;
+				display: none;
+			}
+			
+			.address_box_item_update a {
+				color: orangered;
+				font-size: 15px;
+				display: block;
+			}
+			
+			.address_box_item_xinxi li:nth-child(3) {
+				width: 200px;
+				height: 60px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			
+			.address_box_item_new {
+				width: 270px;
+				height: 180px;
+				display: inline-block;
+				border: 1px solid #CCCCCC;
+				position: absolute;
+				top: 44px;
+			}
+			
+			.address_box_item_new p {
+				display: block;
+				margin: 70px 88px;
+				padding: 5px 6px;
+				border: 1px solid white;
+				background: #CCCCCC;
+				border-radius: 40%;
+				opacity: 0.9;
+			}
+			
+			.address_box_item_new p:hover {
+				background: #808080;
+				opacity: 1;
+			}
+			
+			.content_box_shangpin {
+				height: 55px;
+				font-size: 20px;
+				line-height: 70px;
+				color: #121212eb;
+				border-bottom: 1px solid #80808061;
+			}
+			
+			.content_box_shangpin span {
+				margin-left: 30px;
+			}
+			
+			.content_box_shangpin a {
+				float: right;
+				font-size: 14px;
+				color: #757575;
+			}
+			
+			.shangpin_box {
+				border-bottom: 1px solid #80808061;
+			}
+			
+			.shangpin_item {
+				height: 50px;
+				width: 100%;
+				display: flex;
+				font-size: 14px;
+				align-items: center;
+				margin-top: 5px;
+			}
+			
+			.shangpin_item_link {
+				margin-left: 10px;
+				width: 650px;
+				height: 30px;
+				display: inline-block;
+			}
+			
+			.shangpin_item_link a {
+				font-size: 14px;
+				line-height: 30px;
+				color: #696969;
+			}
+			
+			.shangpin_item .col_price {
+				width: 550px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+			}
+			
+			.shangpin_item .col_price_span {
+				display: inline-block;
+				line-height: 30px;
+			}
+			
+			.col_total {
+				width: 290px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				display: inline-block;
+				float: right;
+				color: orangered;
+			}
+			
+			.col_total_price {
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+			}
+			
+			#peisong {
+				height: 90px;
+				border-bottom: 1px solid #80808061;
+				display: flex;
+				align-items: center;
+			}
+			
+			#peisong span:nth-child(1) {
+				font-size: 20px;
+			}
+			
+			#peisong span:nth-child(2) {
+				font-size: 14px;
+				color: orangered;
+				margin-left: 120px;
+			}
+			
+			.footer {
+				height: 230px;
+				position: relative;
+			}
+			
+			.footer div {
+				position: absolute;
+				right: 160px;
+			}
+			
+			.footer .jianshu {
+				top: 30px;
+			}
+			
+			.footer .jianshu span {
+				color: orangered;
+				margin-left: 40px;
+			}
+			
+			.footer .zongjia {
+				top: 60px;
+			}
+			
+			.footer .zongjia span {
+				color: orangered;
+				margin-left: 40px;
+			}
+			
+			#jiasuan {
+				bottom: 20px;
+				right: 100px;
+			}
+			
+			#jiasuan a {
+				width: 170px;
+				height: 50px;
+				text-align: center;
+				font-size: 20px;
+				font-weight: 600;
+				color: #808080;
+				letter-spacing: 10px;
+				line-height: 50px;
+				background: orangered;
+				display: block;
+			}
+			/*添加地址时的灰背景弹框*/
+			
+			.huibeijing {
+				background: rgba(128, 128, 128, 0.5);
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				display: none;
+			}
+			/*添加地址时的弹框*/
+			
+			.dizhi_tankuan {
+				width: 660px;
+				height: 460px;
+				position: fixed;
+				top: 80px;
+				left: 345px;
+				z-index: 100;
+				background: white;
+				display: none;
+			}
+			
+			.dizhi_tankuan_header {
+				height: 60px;
+				background: rgb(245, 245, 245);
+				position: relative;
+			}
+			
+			.dizhi_tankuan_header>h3 {
+				display: inline-block;
+				font-weight: 500;
+				line-height: 60px;
+				margin-left: 25px;
+			}
+			
+			.dizhi_tankuan_header>span {
+				float: right;
+				font-size: 24px;
+				font-weight: 600;
+				padding: 0px 6px 4px 6px;
+				margin-right: 30px;
+				color: rgba(57, 57, 57, 0.9);
+				position: absolute;
+				top: 9px;
+				right: 0px;
+			}
+			
+			.dizhi_tankuan_header>span:hover {
+				background: rgba(259, 57, 53, 0.9);
+				border-radius: 50%;
+				color: white;
+			}
+			
+			.form_item {
+				position: relative;
+				display: inline-block;
+				/*border: 1px solid gold;*/
+			}
+			
+			.form_item input {
+				height: 40px;
+				width: 280px;
+				text-indent: 16px;
+				border: 1px solid #b0b0b0;
+			}
+			
+			.form_item span {
+				display: block;
+				position: absolute;
+				top: 11px;
+				left: 16px;
+				font-size: 14px;
+				color: #b0b0b0;
+			}
+			
+			.dizhi_tankuan >form {
+				padding: 40px;
+			}
+			
+			#xiangxidizhi {
+				position: relative;
+			}
+			
+			#xiangxidizhi textarea {
+				font-size: 14px;
+				width: 567px;
+				height: 90px;
+				padding-top: 12px;
+				line-height: 16px;
+				text-indent: 16px;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			
+			#xiangxidizhi p {
+				display: inline-block;
+				position: absolute;
+				top: 40px;
+				left: 16px;
+				color: #b0b0b0;
+			}
+			
+			.form_baocun {
+				height: 50px;
+				width: 430px;
+				background: rgb(245, 245, 245);
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				padding-top: 30px;
+				padding-left: 230px;
+			}
+			
+			.form_baocun input {
+				width: 90px;
+				height: 30px;
+				background: rgb(247, 94, 4);
+			}
+			
+			.form_baocun a {
+				display: inline-block;
+				width: 90px;
+				height: 28px;
+				background: rgb(176, 176, 176);
+				text-align: center;
+				line-height: 28px;
+				margin-left: 10px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				//头部动画
+				$(".user_name").eq(0).mouseover(function() {
+					$(".user_name_list").eq(0).css("display", "block");
+				})
+				$(".user_name").eq(0).mouseout(function() {
+					$(".user_name_list").eq(0).css("display", "none");
+				})
+				$(".user_name_list").eq(0).mouseover(function() {
+					$(".user_name_list").eq(0).css("display", "block");
+				})
+				$(".user_name_list").eq(0).mouseout(function() {
+						$(".user_name_list").eq(0).css("display", "none");
+					})
+					//地址栏的动画
+				for (var i = 0; i < $(".address_box_item").size(); i++) {
+					//闭包，控制i的值
+					(function(i) {
+						$(".address_box_item").eq(i).click(function() {
+							//改变样式前，重置其他地址框的样式
+							$(".address_box_item").css("border", "1px solid #CCCCCC");
+							$(".address_box_item_update").css("display", "none");
+							$(".address_box_item").eq(i).css("border", "1px solid orangered");
+							$(".address_box_item_update").eq(i).css("display", "block");
+						})
+					})(i)
+				}
+				//添加地址栏弹框的 input动画
+				//input 获得焦点时的动画
+				for (var i = 0; i < $(".form_item input").size(); i++) {
+					(function(i) {
+						$(".form_item input").eq(i).focus(function() {
+							$(".form_item span").eq(i).css({
+								top: "-9px",
+								color: "#ff6700"
+							});
+							$(".form_item input").eq(i).css("border", "1px solid #ff6700");
+							var str = 0;
+							if (i == 0) {
+								str = "收货人姓名";
+							} else if (i == 1) {
+								str = "11位手机号";
+							} else if (i == 2) {
+								str = "";
+							} else if (i == 3) {
+								str = "如：家，公司，限5个字内";
+							}
+							$(".form_item input").eq(i).attr("placeholder", str);
+							$(".form_item input").eq(i).css("outline", "0");
+						})
+					})(i)
+				}
+				//input 失去焦点时的动画
+				for (var i = 0; i < $(".form_item input").size(); i++) {
+					(function(i) {
+						$(".form_item input").eq(i).blur(function() {
+							$(".form_item span").eq(i).css({
+								top: "11px",
+								color: "#b0b0b0"
+							});
+							$(".form_item input").eq(i).css("border", "1px solid #b0b0b0")
+							var str = "";
+							$(".form_item input").eq(i).attr("placeholder", str);
+							if ($(".form_item input").eq(i).val() != "") {
+								$(".form_item span").eq(i).css("display", "none");
+							} else {
+								$(".form_item span").eq(i).css("display", "block");
+							}
+						})
+					})(i)
+				}
+				//textarea 获得焦点时的动画
+				$("#xiangxidizhi textarea").eq(0).focus(function() {
+						$("#xiangxidizhi p").eq(0).css({
+							top: "20px",
+							color: "#ff6700"
+						});
+						$("#xiangxidizhi textarea").eq(0).css("border", "1px solid #ff6700");
+						$("#xiangxidizhi textarea").eq(0).attr("placeholder", "详细地址，路名或街道名称，门牌号");
+						$("#xiangxidizhi textarea").eq(0).css("outline", "0");
+					})
+					//textarea 失去焦点时的动画
+				$("#xiangxidizhi textarea").eq(0).blur(function() {
+					$("#xiangxidizhi p").eq(0).css({
+						top: "40px",
+						color: "#b0b0b0"
+					});
+					$("#xiangxidizhi textarea").eq(0).css("border", "1px solid #b0b0b0");
+					$("#xiangxidizhi textarea").eq(0).attr("placeholder", "");
+					if ($("#xiangxidizhi textarea").eq(0).val() != "") {
+						$("#xiangxidizhi p").eq(0).css("display", "none");
+					} else {
+						$("#xiangxidizhi p").eq(0).css("display", "block");
+					}
+				})
+				//点击添加地址时弹出灰背景和弹框
+				$(".address_box_item_new p").eq(0).click(function(){
+					$(".dizhi_tankuan").eq(0).css("display","block");
+					$(".huibeijing").eq(0).css("display","block");
+				})
+				//点击x时，关闭弹框和灰色背景
+				$(".dizhi_tankuan_header span").eq(0).click(function(){
+					//清除form表单里的内容
+//					$(".dizhi_tankuan form")[0].reset();
+					$(".form_item_input").val("");
+					$(".form_item span").css("display","block");
+					$("#xiangxidizhi p").css("display","block");
+					$(".dizhi_tankuan").eq(0).css("display","none");
+					$(".huibeijing").eq(0).css("display","none");				
+				})
+				//点击地址框中的修改时的动画
+				for(var i=0;i<$(".address_box_item_update a").size();i++){
+					(function(i){
+						$(".address_box_item_update a").eq(i).click(function(){
+							$(".dizhi_tankuan").eq(0).css("display","block");
+							$(".huibeijing").eq(0).css("display","block");	
+							
+						})
+					})(i)
+				}
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="header">
+			<a href="#" class="logo"></a>
+			<span>确认订单</span>
+			<a href="#" class="user_name">201464314&nbsp;&nbsp;
+				<span>v</span>
+			</a>
+			<ul class="user_name_list">
+				<li><a href="#">个人中心</a></li>
+				<li><a href="#">评价晒单</a></li>
+				<li><a href="#">我的喜欢</a></li>
+				<li><a href="#">退出登陆</a></li>
+			</ul>
+			<a href="#" class="user_order">我的订单</a>
+		</div>
+		<div class="content_box">
+			<div class="address_box">
+				<p>收货地址</p>
+				<div class="address_box_item">
+					<ul class="address_box_item_xinxi">
+						<li>用户名</li>
+						<li>电话</li>
+						<li>用户地址</li>
+					</ul>
+					<div class="address_box_item_update"><a href="#">修改</a></div>
+				</div>
+
+				<div class="address_box_item">
+					<ul class="address_box_item_xinxi">
+						<li>用户名1</li>
+						<li>电话</li>
+						<li>用户地址</li>
+					</ul>
+					<div class="address_box_item_update"><a href="#">修改</a></div>
+				</div>
+
+				<div class="address_box_item_new">
+					<p> 添加新地址</p>
+				</div>
+			</div>
+			<div class="content_box_shangpin">
+				<span>商品</span>
+				<a href="#">返回购物车&nbsp;></a>
+			</div>
+			<!--商品条目-->
+			<ul class="shangpin_box">
+				<li class="shangpin_item">
+					<img class="shangpin_item_logo" src="img/shoujizhanshi_item3.jpg" width="30" height="30" />
+					<div class="shangpin_item_link">
+						<a href="#"> 红米6 Pro 全网通版 4GB内存 32GB 曜石黑 </a>
+					</div>
+					<span class="col_price">
+						<span class="col_price_span">799</span>元x
+					<span class="col_price_shuliang">1</span>
+					</span>
+					<span class="col_total">
+						<span class="col_total_price">799</span>元
+					</span>
+				</li>
+
+				<li class="shangpin_item">
+					<img class="shangpin_item_logo" src="img/shoujizhanshi_item3.jpg" width="30" height="30" />
+					<div class="shangpin_item_link">
+						<a href="#"> 红米6 Pro 全网通版 4GB内存 32GB 曜石黑 </a>
+					</div>
+					<span class="col_price">
+						<span class="col_price_span">799</span>元x
+					<span class="col_price_shuliang">1</span>
+					</span>
+					<span class="col_total">
+						<span class="col_total_price">799</span>元
+					</span>
+				</li>
+			</ul>
+			<!--配送方式-->
+			<div id="peisong">
+				<span>配送方式</span>
+				<span>包邮</span>
+			</div>
+			<!--尾部-->
+			<div class="footer">
+				<div class="jianshu">
+					商品件数：
+					<span>2</span>件
+				</div>
+				<div class="zongjia">
+					总价：
+					<span>1598</span>元
+				</div>
+				<div id="jiasuan">
+					<a href="#">去结算</a>
+				</div>
+			</div>
+		</div>
+		<!--点击添加地址时的灰背景弹框-->
+		<div class="huibeijing"></div>
+		<!--点击添加地址时的弹框-->
+		<div class="dizhi_tankuan">
+			<div class="dizhi_tankuan_header">
+				<h3>添加收货地址</h3>
+				<span>x</span>
+			</div>
+			<form action="#" method="post" onsubmit="return check();">
+				<div class="form_item">
+					<input class="form_item_input" type="text" />
+					<span>姓名</span>
+				</div>
+				<div class="form_item">
+					<input class="form_item_input" type="text" />
+					<span>手机号</span>
+				</div>
+				<div id="xiangxidizhi">
+					<textarea class="form_item_input"></textarea>
+					<p>详细地址</p>
+				</div>
+				<div class="form_item">
+					<input class="form_item_input" type="text" />
+					<span>邮政编码</span>
+				</div>
+				<div class="form_item">
+					<input class="form_item_input" type="text" />
+					<span>地址标签</span>
+				</div>
+				<div class="form_baocun">
+					<input type="submit" value="保存" />
+					<a href="#">取消</a>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function check() {
+			var a = false;
+			if ($(".form_item_input").eq(0).val()!= "") {
+				if ($(".form_item_input").eq(1).val()!= "") {
+					if ($(".form_item_input").eq(2).val() != "") {
+						if ($(".form_item_input").eq(3).val() != "") {
+							if ($(".form_item_input").eq(4).val() != "") {
+								a = true;
+							}
+						}
+					}
+				}
+			}
+			return a;
+		}	
+	</script>
+
+</html>
