@@ -17,7 +17,24 @@ $(function() {
 		input2.css("background-color", "white");
 		i.css("color", "#CCCCCC");
 	})
-
+	
+	//头部动画
+				$(".header_right_a").eq(0).mouseover(function() {
+					$(".user_name_list").eq(0).css("display", "block");
+					console.log("1");
+				})
+				$(".header_right_a").eq(0).mouseout(function() {
+					$(".user_name_list").eq(0).css("display", "none");
+					console.log("2");
+				})
+				$(".user_name_list").eq(0).mouseover(function() {
+					$(".user_name_list").eq(0).css("display", "block");
+					console.log("3");
+				})
+				$(".user_name_list").eq(0).mouseout(function() {
+						$(".user_name_list").eq(0).css("display", "none");
+						console.log("4");
+					})
 	//定义展示框中的动画
 	var timer;
 	var j = 0;

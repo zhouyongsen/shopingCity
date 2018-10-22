@@ -44,14 +44,18 @@ a {
 }
 
 .header_right li {
-	float: left;
+	float: right;
 	padding: 0px 12px;
 }
 
 .header_right li:hover {
 	color: white;
 }
-
+.header_right >a{
+	display: inline-block;
+	font-size: 14px;
+	color: rgb(161, 161, 161);
+}
 .header_right li a {
 	font-size: 14px;
 	color: rgb(161, 161, 161);
@@ -72,7 +76,32 @@ a {
 	background-position-x: 14px;
 }
 
-
+#header .user_name_list {
+				font-size: 12px;
+				width: 100px;
+				background: #FFFFFF;
+				line-height: 30px;
+				padding: 7px 0;
+				position: absolute;
+				top: 27px;
+				left: 986px;
+				text-align: center;
+				z-index: 99;
+				display: none;
+			}
+			
+			.user_name_list li a {
+				display: block;
+				width: 100px;
+				color: #757575;
+			}
+			
+			.user_name_list li a:hover {
+				color: orange;
+				background: #CCCCCC;
+			}
+			
+			
 /*主要内容区*/
 
 .body {
@@ -91,7 +120,7 @@ a {
 	float: left;
 }
 
-.search .search_left li:nth-child(1) {
+.search .search_left .search_left_logo {
 	width: 125px;
 	height: 60px;
 	background: url(../img/yueliang_logo.jpg) no-repeat;
