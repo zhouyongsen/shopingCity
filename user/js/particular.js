@@ -69,19 +69,23 @@ window.onload =function(){
 //	}
 
 //	选择数量
-	var versions_numbe_subtract= document.getElementById("versions_numbe_subtract");
-	var versions_num_input =document.getElementById("versions_num_input");
-	var versions_numbe_add =document.getElementById("versions_numbe_add");
+//	var versions_numbe_subtract= document.getElementById("versions_numbe_subtract");
+//	var versions_num_input =document.getElementById("versions_num_input");
+//	var versions_numbe_add =document.getElementById("versions_numbe_add");
 	
-	versions_numbe_subtract.onclick = function() {
+	var versions_numbe_subtract= document.getElementsByClassName("versions_numbe_subtract");
+	var versions_num_input =document.getElementsByClassName("versions_num_input");
+	var versions_numbe_add =document.getElementsByClassName("versions_numbe_add");
+	
+	versions_numbe_subtract[0].onclick = function() {
 				
-		versions_num_input.value=versions_num_input.value-1;
-		if(versions_num_input.value==0){
-			versions_num_input.value=1;
+		versions_num_input[0].value=versions_num_input[0].value-1;
+		if(versions_num_input[0].value==0){
+			versions_num_input[0].value=1;
 		}
 	};
-	versions_numbe_add.onclick = function() {	
-		versions_num_input.value=versions_num_input.value-0+1;
+	versions_numbe_add[0].onclick = function() {	
+		versions_num_input[0].value=versions_num_input[0].value-0+1;
 	};
 //选择版本，选择颜色
 	var versions_choose01= document.getElementById("versions_choose01");
