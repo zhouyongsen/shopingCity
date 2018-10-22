@@ -3,8 +3,108 @@
 	<head>
 		<meta charset="utf-8">
 		<title>购物车</title>
+		<link rel="stylesheet" href="css/shopingCar.css" />
+		<script src="js/shopingCar.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.button01{
+				width: 50px;
+				height: 30px;
+				background: red;
+			}
+			.carBottom_wei{
+				margin-top: 350px;
+				margin-left: -60px;
+				position: absolute;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>购物车</h1>
+		<div class="carTop">
+			<div class="carTop_nei">
+				<div class="carTop_img">
+					<img src="img/小米logo_01.png"/>
+				</div>
+				<div class="carTop_text">
+					<h2>我的购物车</h2>
+					<p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+				</div>
+				<div class="carTop_loginRegist">
+					<a href="user_Login.html">登录</a>
+					<span class="sp01">|</span>
+					<a href="regist.html">注册</a>
+				</div>
+			</div>
+		</div>
+		<div id="myCar" class="myCar">
+			<!--商品头部字段列表-->
+			<div class="myCar_top" id="myCar_top">
+				<div class="myCar_top_01">
+					<i id="myCar_top_all"></i>&nbsp;&nbsp;全选
+				</div>
+				<div class="myCar_top_name">商品名称</div>
+				<div class="myCar_top_price">价格</div>
+				<div class="myCar_top_number">数量</div>
+				<div class="myCar_top_countPrice">小计</div>
+				<div class="myCar_top_operation">操作</div>
+			</div>
+			<!--商品内部信息列表-->
+			<div class="carBox">
+				<!--选择-->
+				<div class="carBox_01">
+					<i class="carBox_01_i"></i>&nbsp;&nbsp;选择
+				</div>
+				<!--商品名称-->
+				<div class="carBox_02">
+					<img src="img/小米8 屏幕指纹版_01.png"/>
+					<span id="" class="carBox_02_name">
+						小米8 屏幕指纹版 8GB内存 暮光金 128GB小米8 屏幕指纹版 8GB内 8
+					</span>
+				</div>
+				<!--价格-->
+				<div class="carBox_03" name="">
+					<span id="" class="carBox_price">3599</span>元
+				</div>
+				<!--数量-->
+				<div class="carBox_04">
+					<div class="carBox_04_subtract" >-</div>
+					<div class="carBox_04_nums">
+						<input type="text" name="" class="carBox_04_num"  value="1" />
+					</div>
+					<div class="carBox_04_add" >+</div>
+				</div>
+				<!--小计-->
+				<div class="carBox_05">
+					3599
+				</div>
+				<!--操作-->
+				<div class="carBox_06">
+					<div class="carBox_06_operation">
+						×
+					</div>
+				</div>
+			</div>
+						
+			
+			<div class="carBottom_wei">
+				<div class="button01" id="button01">
+					加入
+				</div>
+			</div>
+		</div>
+		<div class="carBottom_di" id="carBottom_di">
+			<div class="carBottom" id="carBottom">
+				<div class="carBottom_left">
+					<span id="carBottom_right_01" class="carBottom_right_01">
+						共<i id="carBottom_right_i1">1</i>件，已选择<i id="carBottom_right_i1">0</i>件						
+					</span>
+				</div>
+				<div class="carBottom_right">
+					<div class="carBottom_right_count"><span id="">合计：<i>0</i>元</span></div>
+					<div class="carBottom_right_buy">
+						<input class="" type="submit" name="" id="" value="去结算" />
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
