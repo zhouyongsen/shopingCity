@@ -43,24 +43,24 @@
 				height: 56px;
 			}
 			
-			.myorder_header ul {
+			.myorder_header ul >a {
 				padding: 18px 0px;
 				float: left;
 				color: #757575;
 			}
 			
-			.myorder_header ul >li {
+			.myorder_header ul >a>li {
 				float: left;
 				line-height: 20px;
 				padding: 0px 20px;
 				border-left: 1px solid #e0e0e0;
 			}
 			
-			.myorder_header ul >li:hover {
+			.myorder_header ul >a:hover {
 				color: #463f3f4a;
 			}
 			
-			.myorder_header ul >li:nth-child(1) {
+			.myorder_header ul>a:nth-child(1) {
 				padding-left: 0px;
 				color: #ff6700;
 				border: none;
@@ -163,94 +163,121 @@
 				font-weight: 200px;
 			}
 			
-			.myorder_item_box_content a{
+			.myorder_item_box_content a {
 				display: inline-block;
 			}
-			.myorder_item_box_content>div{
+			
+			.myorder_item_box_content>div {
 				display: inline-block;
 			}
-			.ligoumai{
+			
+			.ligoumai {
 				float: right;
 				position: relative;
 				top: 25px;
 				left: -65px;
 			}
-			.ligoumai a{
+			
+			.ligoumai a {
 				margin-top: 10px;
 				padding: 4px 17px;
 			}
-			.ligoumai .a1{
+			
+			.ligoumai .a1 {
 				background: #ff6700;
 				color: white;
 			}
-			.ligoumai .a1:hover{
+			
+			.ligoumai .a1:hover {
 				background: orangered;
 			}
-			.ligoumai .a2:hover{
+			
+			.ligoumai .a2:hover {
 				border: 1px solid #757575;
 				background: #696969;
 				color: white;
 			}
-			.ligoumai .a2{
+			
+			.ligoumai .a2 {
 				border: 1px solid #757575;
 				color: #333333;
 			}
-			.myorder_item_box_content{
+			
+			.myorder_item_box_content {
 				position: relative;
 			}
-			.myorder_item_box_content_desc{
+			
+			.myorder_item_box_content_desc {
 				position: relative;
-				top:-10px;
+				top: -10px;
 				left: 45px;
 				font-size: 14px;
 				line-height: 22px;
 			}
-			.myorder_item_box_content_desc a{
+			
+			.myorder_item_box_content_desc a {
 				color: #333333;
 			}
-			.myorder_item_box_content>a{
+			
+			.myorder_item_box_content>a {
 				position: relative;
-				top:15px;
+				top: 15px;
 				left: 35px;
 			}
-			.myorder_fanye{
-				margin-top:30px;
+			
+			.myorder_fanye {
+				margin-top: 30px;
 				height: 30px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 			}
-			.myorder_shangyiye ,.myorder_xiayiye{
+			
+			.myorder_shangyiye,
+			.myorder_xiayiye {
 				display: inline-block;
 				font-size: 24px;
 				line-height: 24px;
 				padding: 2px 6px;
 				margin-right: 30px;
 			}
-			.myorder_xiayiye{
+			
+			.myorder_xiayiye {
 				margin-right: 0px;
 				margin-left: 30px;
 			}
-			.sp1{
+			
+			.sp1 {
 				height: 24px;
 				line-height: 24px;
 				font-size: 18px;
-				padding:4px 20px;
-				background: #696969;
-				margin:0px 5px;
+				padding: 4px 10px;
+				background: #E0E0E0;
+				margin: 0px 5px;
+				border-radius: 10px;
 			}
 		</style>
 	</head>
 
 	<body>
+		<!--顶部导航栏-->
+		<div id="top_Box"></div>
 		<div class="myorder">
 			<p>我的订单</p>
 			<div class="myorder_header">
 				<ul>
-					<li>全部有效订单</li>
-					<li>待支付</li>
-					<li>待收货</li>
-					<li>已关闭</li>
+					<a href="#">
+						<li>全部有效订单</li>
+					</a>
+					<a href="#">
+						<li>待支付</li>
+					</a>
+					<a href="#">
+						<li>待收货</li>
+					</a>
+					<a href="#">
+						<li>已关闭</li>
+					</a>
 				</ul>
 				<div class="myorder_header_searchbox">
 					<input type="text" placeholder="输入商品名称、商品编号、订单号" />
@@ -258,44 +285,70 @@
 				</div>
 			</div>
 			<!--全部订单-->
-			<div class="myorder_item_box">
-				<div class="myorder_item_box_header">
-					<p class="myorder_status">等待支付</p>
-					<ul>
-						<li>2018年10月15日 15:35<span class="sep">|</span></li>
-						<li>用户名<span class="sep">|</span></li>
-						<li>
-							<a href="#">20198474892374</a>
-							<span class="sep">|</span>
-						</li>
-						<li>在线支付</li>
-					</ul>
-					<span>
-						订单金额：
-						<span class="jiage">3434.00</span>元
-					</span>
-				</div>
-				<div class="myorder_item_box_content">
-					<a href="particular.html">
-						<img src="img/shoujizhanshi_item1.jpg" width="80" height="86"/>
-					</a>
-					<div class="myorder_item_box_content_desc">
-						<p><a href="particular.html">小米8 屏幕指纹版 8GB内存 透明 128GB</a></p>
-						<p class="price">  3599元  × 1  </p>
-					</div>
-					<div class="ligoumai">
-						<p><a  class="a1" href="#">立即购买</a></p>
-						<p><a class="a2" href="#">订单详情</a></p>
-					</div>
-				</div>
+			<div class="order_boxs">
+				<p style="font-size: 18px; color: #757575;margin-left: 100px;margin-top: 20px;display: none;">您还没有订单！</p>
 			</div>
+
 			<div class="myorder_fanye">
 				<span class="myorder_shangyiye"><</span>
 				<span class="sp1">1</span>
 				<span class="myorder_xiayiye">></span>
 			</div>
 		</div>
-		
+		<!--底部-->
+		<div id="bottum_box"></div>
 	</body>
+	<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+	<script type="text/javascript">
+		$("#top_Box").load("header.html");
+		$("#bottum_box").load("bottum_box.html");
+		//创建订单项函数
+		function fn(j) {
+			var $myorder_item_box = $("<div class='myorder_item_box'></div>");
+			var $myorder_item_box_header = $("<div class='myorder_item_box_header'></div>");
+			var $myorder_item_box_content = $("<div class='myorder_item_box_content'></div>");
+			// $myorder_item_box_header 里面的内容
+			var $myorder_status = $("<p class='myorder_status'>等待支付</p>");
+			var $myorder_item_box_header_ul = $("<ul></ul>");
+			var $myorder_item_box_header_span = $("<span>订单金额：<span class='jiage'>3434.00</span>元</span>");
+			//创建ul里面的标签
+			var $myorder_item_box_header_ul_li1 = $("<li>2018年10月15日 15:35<span class='sep'>|</span></li>");
+			var $myorder_item_box_header_ul_li2 = $("<li>用户名<span class='sep'>|</span></li>");
+			var $myorder_item_box_header_ul_li3 = $("<li><a href='#'>20198474892374</a><span class='sep'>|</span></li>");
+			var $myorder_item_box_header_ul_li4 = $("<li>在线支付</li>");
+			$myorder_item_box_header_ul.append($myorder_item_box_header_ul_li1);
+			$myorder_item_box_header_ul.append($myorder_item_box_header_ul_li2);
+			$myorder_item_box_header_ul.append($myorder_item_box_header_ul_li3);
+			$myorder_item_box_header_ul.append($myorder_item_box_header_ul_li4);
+			$myorder_item_box_header.append($myorder_status);
+			$myorder_item_box_header.append($myorder_item_box_header_ul);
+			$myorder_item_box_header.append($myorder_item_box_header_span);
+			//myorder_item_box_content 里的标签
+			var $myorder_item_box_content_aimg = $("<a href='particular.html'><img src='img/shoujizhanshi_item1.jpg' width='80' height='86'/></a>");
+			var $myorder_item_box_content_desc = $("<div class='myorder_item_box_content_desc'><p><a href='particular.html'>小米8 屏幕指纹版 8GB内存 透明 128GB</a></p><p class='price'>  3599元  × 1  </p></div>");
+			var $ligoumai = $("<div class='ligoumai'><p><a  class='a1' href='user_zhifu.html'>立即购买</a></p><p><a class='a2' href='user_dingdanxiangqing.html'>订单详情</a></p></div>");
+			$myorder_item_box_content.append($myorder_item_box_content_aimg);
+			$myorder_item_box_content.append($myorder_item_box_content_desc);
+			$myorder_item_box_content.append($ligoumai);
+			$myorder_item_box.append($myorder_item_box_header);
+			$myorder_item_box.append($myorder_item_box_content);
+			var $order_boxs_li = $("<li class='order_boxs_li'></li>");
+			$order_boxs_li.append($myorder_item_box);
+			var $order_boxs_ul = $("<ul class='order_boxs_ul'></ul>");
+			$order_boxs_ul.append($order_boxs_li);
+			$(".order_boxs").eq(0).append($order_boxs_ul);
+		}
+		//点击事件
+		for (var i = 0; i < $(".myorder_header >ul>a").size(); i++) {
+			(function(i) {
+				$(".myorder_header >ul>a").eq(i).mousedown(function() {
+					$(".order_boxs_ul").eq(0).remove();
+					fn(i);
+					$(".myorder_header>ul>a").css("color", "#757575");
+					$(".myorder_header>ul>a").eq(i).css("color", "#ff6700");
+				})
+			})(i);
+		}
+	</script>
 
 </html>

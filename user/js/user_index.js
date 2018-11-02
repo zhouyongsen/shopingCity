@@ -17,30 +17,17 @@ $(function() {
 		input2.css("background-color", "white");
 		i.css("color", "#CCCCCC");
 	})
-	
-	//头部动画
-				$(".header_right_a").eq(0).mouseover(function() {
-					$(".user_name_list").eq(0).css("display", "block");
-					console.log("1");
-				})
-				$(".header_right_a").eq(0).mouseout(function() {
-					$(".user_name_list").eq(0).css("display", "none");
-					console.log("2");
-				})
-				$(".user_name_list").eq(0).mouseover(function() {
-					$(".user_name_list").eq(0).css("display", "block");
-					console.log("3");
-				})
-				$(".user_name_list").eq(0).mouseout(function() {
-						$(".user_name_list").eq(0).css("display", "none");
-						console.log("4");
-					})
 	//定义展示框中的动画
 	var timer;
 	var j = 0;
+	//初始化动画框
+	$(".zhanshi_right a").not(j).css("opacity", "0");
+	$(".zhanshi_right a").not(j).css("display", "none");
+	$(".zhanshi_right a").eq(j).css("display", "block");
+	$(".zhanshi_right a").eq(j).css("opacity", "1");
 	$(".zhanshi_right div").eq(j).css("background-color", "dimgray");
 	timer = setInterval(fn, 4000);
-
+	
 	function fn() {
 		$(".zhanshi_right a").eq(j).animate({
 			opacity: 0

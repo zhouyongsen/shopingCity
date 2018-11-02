@@ -12,25 +12,8 @@
 	</head>
 
 	<body>
-		<div class="topbar01">
-			<!--顶部导航栏-->
-		<header class="header">
-			<ul class="header_left">
-				<li>月芽商城</li>
-				<li>手机</li>
-				<li>显示器</li>
-				<li>电脑</li>
-			</ul>
-			<ul class="header_right">
-				<li>登陆</li>
-				<li>注册</li>
-				<li>消息通知</li>
-				<li>
-					<a href="#">购物车(<span id="gouwuche_shuliang">0</span>)</a>
-				</li>
-			</ul>
-		</header>
-		</div>
+		<!--顶部导航栏-->
+		<div id="top_Box"></div>
 		<!--头部第二个菜单栏-->
 		<div class="topbar02" id="topbar02">
 			<div class="topbar02_nei" id="topbar02_nei">
@@ -124,6 +107,12 @@
 				<a href="#" class="bottom01_a5">预约维修服务</a>
 			</div>
 		</div>
+		<!--底部-->
+		<div id="bottum_box"></div>
 	</body>
-
+<script src="js/jquery-1.12.0.js"></script>
+<script type="text/javascript">
+	$("#top_Box").load("header.html");
+	$("#bottum_box").load("bottum_box.html");
+	</script>
 </html>

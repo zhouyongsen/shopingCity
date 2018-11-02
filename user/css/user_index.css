@@ -11,102 +11,15 @@ ul {
 
 a {
 	text-decoration: none;
+	color: #757575;
 }
-
-
-/*顶部导航栏*/
-
-.header {
-	height: 40px;
-	width: 1246px;
-	padding: 0px 60px;
-	line-height: 40px;
-	font-size: 14px;
-	background: rgb(51, 51, 51);
-	color: rgb(161, 161, 161);
-}
-
-.header_left {
-	float: left;
-}
-
-.header_left li {
-	float: left;
-	padding: 0px 12px;
-}
-
-.header_left li:hover {
-	color: white;
-}
-
-.header_right {
-	float: right;
-}
-
-.header_right li {
-	float: right;
-	padding: 0px 12px;
-}
-
-.header_right li:hover {
-	color: white;
-}
-.header_right >a{
-	display: inline-block;
-	font-size: 14px;
-	color: rgb(161, 161, 161);
-}
-.header_right li a {
-	font-size: 14px;
-	color: rgb(161, 161, 161);
-	padding-left: 40px;
-	background: url(../img/gouwuche1.png) no-repeat;
-	background-size: 23px;
-	background-position-x: 14px;
-}
-
-.header_right li:nth-child(4):hover {
-	background: white;
-}
-
-.header_right li a:hover {
-	color: orange;
-	background: url(../img/gouwuche2.png) no-repeat;
-	background-size: 23px;
-	background-position-x: 14px;
-}
-
-#header .user_name_list {
-				font-size: 12px;
-				width: 100px;
-				background: #FFFFFF;
-				line-height: 30px;
-				padding: 7px 0;
-				position: absolute;
-				top: 27px;
-				left: 986px;
-				text-align: center;
-				z-index: 99;
-				display: none;
-			}
-			
-			.user_name_list li a {
-				display: block;
-				width: 100px;
-				color: #757575;
-			}
-			
-			.user_name_list li a:hover {
-				color: orange;
-				background: #CCCCCC;
-			}
-			
 			
 /*主要内容区*/
 
 .body {
 	padding: 20px 60px 0px 60px;
 	width: 1246px;
+	margin:0 auto;
 }
 
 .search {
@@ -221,12 +134,11 @@ a {
 	top: 0px;
 	left: 0px;
 }
-
 .zhanshi_right img {
 	width: 1011px;
 	height: 400px;
 	display: block;
-	opacity: 1;
+	opacity:1 ;
 }
 
 #zhanshi_right_span1 {
@@ -261,8 +173,8 @@ a {
 }
 
 .zhanshi_right div {
-	width: 7px;
-	height: 7px;
+	width: 9px;
+	height: 9px;
 	background: white;
 	border-radius: 50px;
 	position: absolute;

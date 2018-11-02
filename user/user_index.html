@@ -9,39 +9,9 @@
 		<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
 		<script type="text/javascript" src="js/user_index.js"></script>
 	</head>
-
 	<body>
-		<!--顶部导航栏-->
-		<header class="header" id="header">
-			<ul class="header_left">
-				<li>月芽商城</li>
-				<li>手机</li>
-				<li>显示器</li>
-				<li>电脑</li>
-			</ul>
-			<ul class="header_right">
-				<a class="header_right_a" href="user_Login.html">
-					<li>登陆</li>
-				</a>
-				<a href="regist.html">
-					<li>注册</li>
-				</a>
-				<a href="#">
-					<li>消息通知</li>
-				</a>
-				<li>
-					<a href="shopingCar.html">购物车(<span id="gouwuche_shuliang">0</span>)</a>
-				</li>
-			</ul>
-			<ul class="user_name_list">
-				<li><a href="#">个人中心</a></li>
-				<li><a href="#">评价晒单</a></li>
-				<li><a href="#">我的喜欢</a></li>
-				<li><a href="user_Login.html">退出登陆</a></li>
-				<li><a href="user_myorder.html" class="user_order">我的订单</a></li>
-			</ul>
-		</header>
-		<article class="body">
+		<div id="top_Box"></div>
+		<article class="body">			
 			<!--logo及搜索框-->
 			<section class="search">
 				<ul class="search_left">
@@ -420,17 +390,19 @@
 			<a href="#diannao">电脑</a>
 			<a href="#header">回到顶部</a>
 		</div>
+		<!--底部-->
+		<div id="bottum_box"></div>
 	</body>
 	<script type="text/javascript">
-		var input1 = document.getElementById("input1");
-
-		function check() {
-			if (input1.value.length <= 0) {
-				return false;
-			} else {
-				return true;
-			}
+	$("#top_Box").load("header.html");
+	$("#bottum_box").load("bottum_box.html");
+	function check(){
+		if($("#input1").val()==""){
+			return false;
+		}else{
+			return true;
 		}
+	}
 	</script>
 
 </html>

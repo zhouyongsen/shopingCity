@@ -23,7 +23,7 @@
 				list-style: none;
 			}
 			
-			.header {
+			.header1 {
 				height: 105px;
 				background: white;
 				overflow: hidden;
@@ -32,7 +32,7 @@
 				border-bottom: 3px solid orange;
 			}
 			
-			.header .logo {
+			.header1 .logo {
 				display: inline-block;
 				width: 80px;
 				height: 40px;
@@ -41,7 +41,7 @@
 				margin-left: 60px;
 			}
 			
-			.header >span {
+			.header1 >span {
 				display: inline-block;
 				width: 112px;
 				height: 48px;
@@ -52,7 +52,7 @@
 				opacity: 0.9;
 			}
 			
-			.header .user_name {
+			.header1 .user_name {
 				display: inline-block;
 				color: #757575;
 				font-size: 12px;
@@ -60,7 +60,7 @@
 				left: 850px;
 			}
 			
-			.header .user_order {
+			.header1 .user_order {
 				display: inline-block;
 				color: #757575;
 				font-size: 12px;
@@ -68,12 +68,12 @@
 				left: 860px;
 			}
 			
-			.header .user_name span {
+			.header1 .user_name span {
 				font-size: 16px;
 				display: inline-block;
 			}
 			
-			.header .user_name:hover {
+			.header1 .user_name:hover {
 				color: orange;
 			}
 			
@@ -572,8 +572,10 @@
 	</head>
 
 	<body>
-		<div class="header">
-			<a href="#" class="logo"></a>
+		<!--顶部导航栏-->
+		<div id="top_Box"></div>
+		<div class="header1">
+			<a href="user_index.html" class="logo"></a>
 			<span>确认订单</span>
 			<a href="#" class="user_name">201464314&nbsp;&nbsp;
 				<span>v</span>
@@ -584,7 +586,7 @@
 				<li><a href="#">我的喜欢</a></li>
 				<li><a href="#">退出登陆</a></li>
 			</ul>
-			<a href="#" class="user_order">我的订单</a>
+			<a href="user_myorder.html" class="user_order">我的订单</a>
 		</div>
 		<div class="content_box">
 			<div class="address_box">
@@ -661,7 +663,7 @@
 					<span>1598</span>元
 				</div>
 				<div id="jiasuan">
-					<a href="#">去结算</a>
+					<a href="user_zhifu.html">去结算</a>
 				</div>
 			</div>
 		</div>
@@ -700,8 +702,12 @@
 				</div>
 			</form>
 		</div>
+		<!--底部-->
+		<div id="bottum_box"></div>
 	</body>
 	<script type="text/javascript">
+	$("#top_Box").load("header.html");
+	$("#bottum_box").load("bottum_box.html");
 		function check() {
 			var a = false;
 			if ($(".form_item_input").eq(0).val()!= "") {

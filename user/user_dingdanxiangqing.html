@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			body {
+				background: #B0B0B0;
+			}
+			
+			.content_box {
+				width: 940px;
+				height: 800px;
+				background: white;
+				padding: 30px 30px;
+				margin: 30px auto;
+			}
+			
+			.content_box_header {
+				width: 920px;
+				height: 110px;
+				border-bottom: 1px solid #E0E0E0;
+				color: #757575;
+			}
+			
+			.content_box_header p {
+				font-size: 30px;
+				line-height: 68px;
+			}
+			
+			.content_box_header span {
+				color: #333333;
+				font-size: 18px;
+				display: inline-block;
+			}
+			
+			.dingdanzhuangtai {
+				width: 920px;
+				height: 100px;
+				margin-bottom: 30px;
+			}
+			
+			.dingdanzhuangtai >p {
+				font-size: 18px;
+				color: #B0B0B0;
+				padding: 8px 0px;
+			}
+			
+			#bar {
+				width: 920px;
+				height: 30px;
+				position: relative;
+			}
+			
+			#bar ul {
+				width: 920px;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 20px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				z-index: 99;
+			}
+			
+			#bar ul li {
+				float: left;
+				width: 176px;
+				text-align: center;
+			}
+			
+			#bar ul li >span {
+				display: inline-block;
+				font-size: 12px;
+				color: #B0B0B0;
+			}
+			
+			#bar >div {
+				width: 176px;
+				height: 30px;
+				border-radius: 20px;
+				background: greenyellow;
+				position: absolute;
+				z-index: 9;
+				top: 0px;
+				left: 0px;
+			}
+			
+			#bar p {
+				width: 920px;
+				height: 30px;
+				border-radius: 20px;
+				background: #E0E0E0;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			
+			.shangpinxinxi {
+				width: 890px;
+				height: 100px;
+				border-bottom: 1px solid #E0E0E0;
+				position: relative;
+				padding-left: 30px;
+			}
+			
+			.shangpinxinxi a {
+				height: 100px;
+				display: inline-block;
+				font-size: 14px;
+				color: #808080;
+				line-height: 100px;
+			}
+			
+			.shangpinxinxi .shangpinxinxi_a2 {
+				position: absolute;
+				top: 0px;
+				left: 130px;
+			}
+			
+			.shangpinxinxi> span {
+				position: absolute;
+				top: 0px;
+				left: 435px;
+			}
+			
+			.shangpinxinxi span {
+				height: 100px;
+				display: inline-block;
+				font-size: 14px;
+				color: #808080;
+				line-height: 100px;
+			}
+			
+			.shouhuoxinxi p {
+				color: #757575;
+				font-size: 18px;
+				padding: 5px 0px;
+			}
+			
+			.shouhuoxinxi p span {
+				margin-left: 30px;
+				font-size: 14px;
+			}
+			
+			.shouhuoxinxi {
+				border-bottom: 1px solid #E0E0E0;
+				padding-top: 20px;
+				margin-bottom: 5px;
+			}
+			
+			.zhifufangshi {
+				border-bottom: 1px solid #E0E0E0;
+				padding-top: 20px;
+				margin-bottom: 5px;
+			}
+			
+			.zhifufangshi p {
+				margin-top: 10px;
+				color: #757575;
+				font-size: 18px;
+				padding: 5px 0px;
+			}
+			
+			.zhifufangshi p span {
+				margin-left: 30px;
+				font-size: 14px;
+			}
+			
+			.footer >p {
+				color: black;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部导航栏-->
+		<div id="top_Box"></div>
+		<div class="content_box">
+			<div class="content_box_header">
+				<p>订单详情</p>
+				<div class="dingdanbianhao">
+					<span>订单编号:</span>
+					<span>29988009</span>
+				</div>
+			</div>
+			<div class="dingdanzhuangtai">
+				<p>订单状态</p>
+				<div id="bar">
+					<ul>
+						<li>下单
+							<br/><span>10月12日 15:66</span></li>
+						<li>付款
+							<br/><span></span></li>
+						<li>配送
+							<br/><span></span></li>
+						<li>出库
+							<br/><span></span></li>
+						<li>交易成功
+							<br/><span></span></li>
+					</ul>
+					<div></div>
+					<p></p>
+				</div>
+			</div>
+			<div class="shangpinxinxi">
+				<a href="particular.html">
+					<img src="img/shoujizhanshi_item1.jpg" height="80" width="80" />
+				</a>
+				<a href="particular.html" class="shangpinxinxi_a2">
+					<span>小米8 屏幕指纹版 8GB内存 透明 128GB</span>
+				</a>
+				<span>3500元</span>
+			</div>
+			<div class="shouhuoxinxi">
+				<p>收货信息</p>
+				<p>姓名：<span>xff</span></p>
+				<p>联系电话：<span>15277980999</span></p>
+				<p>收货地址:<span>广西南宁西乡塘</span></p>
+			</div>
+			<div class="zhifufangshi">
+				<p>支付方式<span>在线支付</span></p>
+			</div>
+			<div class="footer">
+				<p>商品总价：<span>6667元</span></p>
+			</div>
+		</div>
+		<!--底部-->
+		<div id="bottum_box"></div>
+	</body>
+	<script src="js/jquery-1.12.0.js"></script>
+	<script type="text/javascript">
+		$("#top_Box").load("header.html");
+		$("#bottum_box").load("bottum_box.html");
+	</script>
+
+</html>

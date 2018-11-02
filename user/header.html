@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #757575;
+			}
+			/*顶部导航栏*/		
+			.header {
+				height: 40px;
+				width: 1246px;
+				padding: 8px 60px 0px 60px;
+				line-height: 40px;
+				font-size: 14px;
+				background: rgba(51, 51, 51,0.9);
+				color: rgb(161, 161, 161);
+			}		
+			.header_left {
+				float: left;
+			}			
+			.header_left li {
+				float: left;
+				padding: 0px 12px;
+			}
+			.header_left li a{
+				color: rgb(161, 161, 161);
+			}		
+			.header_left li a:hover {
+				color: white;
+			}
+
+			.header_right {
+				float: right;
+				width: 300px;
+			}
+			.header_right li{
+				float: left;
+				height: 40px;
+			}
+			.header_right li a{				
+				padding: 0px 12px;
+			}			
+			.header_right li a:hover {
+				color: white;
+			}			
+			.header_right .header_right_li4 a {
+				font-size: 14px;
+				color: rgb(161, 161, 161);
+				display: inline-block;
+				height: 40px;
+				line-height: 40px;
+				padding-left: 40px;
+				background: url(img/gouwuche1.png) no-repeat;
+				background-size: 23px;
+				background-position-x: 12px;
+				background-position-y: 9px;
+			}
+			
+			.header_right .header_right_li4:hover {
+				height: 40px;
+				background: white;		
+			}			
+			.header_right .header_right_li4 a:hover {
+				color: orange;
+				display: inline-block;
+				height: 40px;
+				line-height: 40px;
+				background: url(img/gouwuche2.png) no-repeat;
+				background-size: 23px;
+				background-position-x: 12px;
+				background-position-y: 9px;
+			}
+			
+			#header .user_name_list {
+				font-size: 12px;
+				width: 100px;
+				background: #FFFFFF;
+				line-height: 30px;
+				padding: 7px 0;
+				position: absolute;
+				top: 37px;
+				left: 986px;
+				text-align: center;
+				z-index: 99;
+				display: none;
+			}
+			
+			.user_name_list li a {
+				display: block;
+				width: 100px;
+				color: #757575;
+			}
+			.user_name_list li a:hover {
+				color: orange;
+				background: #CCCCCC;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+	</head>
+	
+	<body>
+		<!--顶部导航栏-->
+		<div class="header" id="header">
+			<ul class="header_left">
+				<li><a href="user_index.html">月芽商城</a></li>
+				<li><a href="user_index.html#shoujizhanshi">手机</a></li>
+				<li><a href="user_index.html#xianshiqi">显示器</a></li>
+				<li><a href="user_index.html#diannao">电脑</a></li>
+			</ul>
+			<ul class="header_right">
+				<li><a class="header_right_a" href="user_Login.html">登陆</a></li>
+				<li><a href="regist.html">注册</a></li>
+				<li><a href="#">消息通知</a></li>
+				<li class="header_right_li4">
+					<a href="shopingCar.html">购物车(<span id="gouwuche_shuliang">0</span>)</a>
+				</li>
+			</ul>
+			<ul class="user_name_list">
+				<li><a href="#">个人中心</a></li>
+				<li><a href="#">评价晒单</a></li>
+				<li><a href="#">我的喜欢</a></li>
+				<li><a href="user_Login.html">退出登陆</a></li>
+				<li><a href="user_myorder.html" class="user_order">我的订单</a></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		//头部动画
+		$(".header_right_a").eq(0).mouseover(function() {
+			$(".user_name_list").eq(0).css("display", "block");
+		})
+		$(".header_right_a").eq(0).mouseout(function() {
+			$(".user_name_list").eq(0).css("display", "none");
+		})
+		$(".user_name_list").eq(0).mouseover(function() {
+			$(".user_name_list").eq(0).css("display", "block");
+		})
+		$(".user_name_list").eq(0).mouseout(function() {
+			$(".user_name_list").eq(0).css("display", "none");
+		})
+	</script>
+
+</html>
